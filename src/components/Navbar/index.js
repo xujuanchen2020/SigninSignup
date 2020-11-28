@@ -7,7 +7,7 @@ import {Nav, NavbarContainer, NavItem,
 
 const Navbar = ({toggle}) => {
     return (
-        <div>
+        <>
         <Nav>
             <NavbarContainer>
                 <NavLogo to='/'>Portfolio</NavLogo>
@@ -33,7 +33,7 @@ const Navbar = ({toggle}) => {
                 </NavBtn>
             </NavbarContainer>
         </Nav>
-        </div>
+    </>    
     )
 }
 

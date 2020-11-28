@@ -4,18 +4,18 @@ import {Link as LinkR} from 'react-router-dom';
 import {Link as LinkS} from 'react-scroll';
 
 export const SidebarContainer = styled.aside`
-position: fixe;
-z-index: 999; //above everything
+position: fixed;
+z-index: 999; 
 width: 100%;
 height: 100%;
-background-color: #0d0d0d;
+background: #0d0d0d;
 display: grid;
 align-items: center;
 top: 0;
 left: 0;
 transition: 0.3s ease-in-out;
 opacity: ${({isOpen})=>(isOpen ? '100%' : '0')};
-top: ${({isOpen})=>(isOpen ? '0' : '-100')};
+top: ${({isOpen})=>(isOpen ? '0' : '-100%')};
 
 `;
 
@@ -27,7 +27,7 @@ export const Icon = styled.div`
 position: absolute;
 top: 1.2rem;
 right: 1.5rem;
-background-color: transparent;
+background: transparent;
 font-size: 2rem;
 cursor: pointer;
 outline: none;
@@ -47,8 +47,8 @@ list-style: none;
 transition: 0.2s ease-in-out;
 text-decoration: none;
 color: #fff;
-cursor pointer;
-&.hover{
+cursor: pointer;
+&:hover{
     color: #01bf71;
     transition: 0.2s ease-in-out;
 }
@@ -64,7 +64,7 @@ list-style: none;
 transition: 0.2s ease-in-out;
 color: #fff;
 cursor: pointer;
-&.hover{
+&:hover{
     color: #01bf71;
     transition: 0.2s ease-in-out;
 }
@@ -77,7 +77,7 @@ justify-content: center;
 
 export const SidebarRoute = styled(LinkR)`
 border-radius: 50px;
-background-color: #01bf71;
+background: #01bf71;
 white-space: nowrap;
 padding: 16px 64px;
 color: #010606;
@@ -88,9 +88,9 @@ cursor: pointer;
 transition: all 0.2s ease-in-out;
 text-decoration: none;
 
-&.hover{
+&:hover{
     transition: all 0.2s ease-in-out;
-    background-color: #fff;
+    background: #fff;
     color: #010606;
 }
 `;
